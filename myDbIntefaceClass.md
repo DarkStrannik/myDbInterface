@@ -1,4 +1,5 @@
 <?php
+
 /**
 * Alex_Db_Interface_myInterfaceDb
 *
