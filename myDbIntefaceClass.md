@@ -11,6 +11,7 @@
 
 
 class Alex_Db_Interface_myInterfaceDb{
+
 	/**
 	* Свойства класса
 	* @var string Строка
