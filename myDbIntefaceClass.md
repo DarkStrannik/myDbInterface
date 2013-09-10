@@ -3,7 +3,7 @@
 /**
 * Alex_Db_Interface_myInterfaceDb
 *
-* Класс для работы с БД
+* Класс для работы с РСУ
 *
 * @author D_S <Strannick-Sirius@yandex.ru>
 * @version 1.0
