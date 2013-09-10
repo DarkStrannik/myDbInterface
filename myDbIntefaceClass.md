@@ -5,7 +5,7 @@
 *
 * Класс для работы с БД
 *
-* @author D_S
+* @author D_S <Strannick-Sirius@yandex.ru>
 * @version 1.0
 */
 
