@@ -34,9 +34,9 @@ class Alex_Db_Interface_myInterfaceDb{
 	* Метод класса
 	* Выбор РСУ и соединение
 	*
-	* @param string $db строка 
+	* @param string $rsu строка 
 	*/
-	public function getObj($db){}
+	public function getObj($rsu){}
 	
 	/**
 	* Метод класса
