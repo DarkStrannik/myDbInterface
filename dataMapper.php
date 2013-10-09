@@ -10,104 +10,41 @@
 */
 
 class Alex_DB_Inteface_handlingDate{
+	/**
+	 * Метод класса
+	 * Создает данные в объекте
+	 * 
+	 * @param string $sType
+	 * @param string $sName
+	 * @param array  $aOptions
+	 */
+	public function createDate($sType, $sName, array $aOptions = array());
 	
 	/**
-	* Основные действия с объектом
-	*/
+	 * Метод класса
+	 * Поиск данных в объекте
+	 *
+	 * @param string $sParam
+	 */
+	public function findDate($sParam);
 	
 	/**
-	* Метод класса
-	*
-	* Создает данные в объекте
-	*/
-	public function createDate(){}
+	 * Метод класса
+	 * Удаляет данные из объекта
+	 *
+	 * @param string $sParam
+	 */
+	public function deleteDate($sParam);
 	
 	/**
-	* Метод класса
-	*
-	* Выбор данных из объекта
-	*/
-	public function fetchDate(){}
+	 * Метод класса
+	 * Обновляет данные в объекте
+	 *
+	 * @param array $aName
+	 * @param array $aValue
+	 */
+	public function updateDate(array $aName = array(), array $aValue = array());
 	
-	/**
-	* Метод класса
-	*
-	* Необходим ли данный метод если есть fetchDate();???
-	* Поиск данных в объекте
-	*/
-	public function findDate(){}
 	
-	/**
-	* Метод класса
-	*
-	* Удаляет данные из объекта
-	*/
-	public function deleteDate(){}
-	
-	/**
-	* Метод класса
-	*
-	* Обновляет данные в объекте
-	*/
-	public function updateDate(){}
-	
-	/**
-	* Расширенние основных методов
-	* Необходимы ли они???
-	*/
-	/**
-	* Метод класса
-	* Выводит всю информацию находящуюся в объекте с которым работает класс
-	*/
-	public function fetchAll(){}
-	
-	/**
-	* Получить первый элемент объекта
-	*/
-	public function fetchFirst(){}
-	
-	/**
-	* Получитьь последний элемент объекта
-	*/
-	public function fetchLast(){}
-	
-	/**
-	* Получить следующий элемент объекта
-	*/
-	public function fetchNext(){}
-	
-	/**
-	* Получить предыдущий элемент объекта
-	*/
-	public function fetchPrevious(){}
-	
-	/**
-	* Удалить все элементы объекта
-	*/
-	public function deleteAll(){}
-	
-	/**
-	* Удалить определенный элемент объект
-	*/
-	public function deleteOneObj(){}
-	
-	/**
-	* Удалить элементы согласно признаку
-	*/
-	public function deleteObjAttribute(){}
-	
-	/**
-	* Создать один элемент
-	*/
-	public function createOneObj(){}
-	
-	/**
-	* Создать несколько элементов
-	*/
-	public function createSeveralObj(){}
-	
-	/**
-	* И т.д.
-	*/
 }
 ?>
