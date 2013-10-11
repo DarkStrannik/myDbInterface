@@ -16,7 +16,6 @@ interface Alex_Db_Interface_dataBaseMapper{
 	
 	/**
 	 * Конструктор устанавливает соединение с БД
-	 * Принимает массив значений
 	 *
 	 * @param array $aConnect
 	 */
