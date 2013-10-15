@@ -27,7 +27,7 @@ interface Alex_Db_Interface_dataBaseMapper{
 	 * @param array $aValue
 	 * @param array $aWhereOptions
 	 */
-	public function update(array $aValue = array, array $aWhereOptions = NULL);
+	public function update(array $aValue = array, array $aWhereOptions = array());
 	
 	/**
 	 * Добавляет данные БД
@@ -42,14 +42,14 @@ interface Alex_Db_Interface_dataBaseMapper{
 	 * @param array  $aCols
 	 * @param array  $aWhereOptions
 	 */
-	public function select(array $aCols = array, array $aWhereOptions = NULL);
+	public function select(array $aCols = array, array $aWhereOptions = array());
 	
 	/**
 	 * Удаляет данные из таблицы
 	 *
 	 * @param array  $aWhereOptions
 	 */
-	public function delete( array $aWhereOptions = NULL);
+	public function delete( array $aWhereOptions = array());
 	
 	/**
 	 * Устанавливает имя БД
