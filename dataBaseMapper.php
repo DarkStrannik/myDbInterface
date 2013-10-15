@@ -41,20 +41,15 @@ interface Alex_Db_Interface_dataBaseMapper{
 	 *
 	 * @param array  $aCols
 	 * @param array  $aWhereOptions
-	 * @param array  $aOrderByOptions
-	 * @param string $sDescOptions
 	 */
-	public function select(array $aCols = array, array $aWhereOptions = NULL, array $aOrderByOptions = NULL, $sDescOptions = NULL);
+	public function select(array $aCols = array, array $aWhereOptions = NULL);
 	
 	/**
 	 * Удаляет данные из таблицы
 	 *
-	 * @param array  $aOrderByOptions
 	 * @param array  $aWhereOptions
-	 * @param string $sDescOptions
-	 * @param int    $iLimitOptions
 	 */
-	public function delete(array $aOrderByOptions = NULL, array $aWhereOptions = NULL, $sDescOptions = NULL, $iLimitOptions = NULL);
+	public function delete( array $aWhereOptions = NULL);
 	
 	/**
 	 * Устанавливает имя БД
