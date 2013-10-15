@@ -12,7 +12,6 @@
 
 interface Alex_Db_Interface_dataBaseMapper{
 	
-	public $tableName;
 	
 	/**
 	 * Конструктор устанавливает соединение с БД
