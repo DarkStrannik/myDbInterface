@@ -8,6 +8,8 @@
  * @version 1.0
  */
  
+ require_once('../Interface/dataMepper.php');
+ 
  class Alex_Db_Abstract_dataMapper extends Alex_Db_Interface_dataMapper{
 	/**
 	 * Свойтво класса
