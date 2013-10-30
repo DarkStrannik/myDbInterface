@@ -8,83 +8,89 @@
  * @version 1.0
  */
  
- require_once('../Interface/dataMepper.php');
  
- class Alex_Db_Abstract_dataMapper extends Alex_Db_Interface_dataMapper{
-	/**
-	 * Свойтво класса
-	 *
-	 * @var string Строка
-	 */
-	protected $sTableName;
-	
-	/**
-	 * Конструктор класса
-	 *
-	 * Устанавливает соединение с данными
-	 *
-	 * @param array $aConnection массив
-	 */
-	abstract protected function __construct(array $aConnect = array());
-	
-	/**
-	 * Метод класса
-	 * 
-	 * Занимается обновлением данных
-	 *
-	 * @param array $aValue массив
-	 * @param array $aWhereOptions массив
-	 */
-	abstract protected function update(array $aValue = array(), array $aWhereOptions = array());
-	
-	/**
-	 * Метод класса 
-	 *
-	 * Занимается добавлением данных
-	 *
-	 * @param array $aValue массив
-	 */
-	abstract protected function insert(array $aValue = array);
-	
-	/**
-	 * Метод класса
-	 *
-	 * Занимается воборкой данных
-	 *
-	 * @param array $aCools массив
-	 * @param array $aWhereOptions массив
-	 */
-	abstract protected function select(array $aCools = array(), array $aWhereOptions = array());
-	
-	/**
-	 * Метод класса
-	 *
-	 * Занимается удалением данных либо все таблицы
-	 *
-	 * @param array $aWhereOptions массив
-	 */
-	abstract protected function delete(array $aWhereOptions = array());
-	
-	/**
-	 * Метод класса
-	 *
-	 * Принимает название таблицы данных
-	 *
-	 * @param string $sTableName строка
-	 */
-	public function setTableName($sTableName){
-		$this->sTableName = $sTableName;
+require_once(($_SERVER['DOCUMENT_ROOT']) . 'Alex/Db/Interface/dataMepper.php');
+
+abstract class Alex_Db_Abstract_dataMapper extends Alex_Db_Interface_dataMepper{
+    /**
+     * Свойтво класса
+     *
+     * @var string Строка
+     */
+    protected $tableName;
+
+    /**
+     * Конструктор класса
+     *
+     * Устанавливает соединение с данными
+     *
+     * @param array $connection массив
+     */
+    public function __construct(array $connection = array());
+
+    /**
+     * Метод класса
+     *
+     * Занимается обновлением данных
+     *
+     * @param array $value массив
+     * @param array $whereOptions массив
+     */
+    public function update(array $value = array(), array $whereOptions = array());
+
+    /**
+     * Метод класса
+     *
+     * Занимается добавлением данных
+     *
+     * @param array $value массив
+     */
+    public function insert(array $value = array());
+
+    /**
+     * Метод класса
+     *
+     * Занимается воборкой данных
+     *
+     * @param array $cols массив
+     * @param array $whereOptions массив
+     */
+    public function select(array $cols = array(), array $whereOptions = array());
+
+    /**
+     * Метод класса
+     *
+     * Занимается удалением данных либо все таблицы
+     *
+     * @param array $whereOptions массив
+     */
+    public function delete(array $whereOptions = array());
+
+    /**
+     * Метод класса
+     *
+     * Принимает название таблицы данных
+     *
+     * @param string $tableName строка
+     */
+    public function setTableName($tableName){
+	if(!is_scalar($tableName)){
+		throw new dbMapperBadTableName();
 	}
-	
-	/**
-	 * Метод класса
-	 *
-	 * Возвращает название таблицы данных
-	 *
-	 * @return string $sTableName строка
-	 */
-	public function getTableName(){
-		return $this->sTableName;
+	else {
+		$this->tableName = $tableName;
 	}
- }
+    }
+
+    /**
+     * Метод класса
+     *
+     * Возвращает название таблицы данных
+     *
+     * @return string $tableName строка
+     */
+    public function getTableName(){
+        return $this->tableName;
+    }
+}
 ?>
