@@ -15,7 +15,7 @@ abstract class Alex_Db_Abstract_dataMapper extends Alex_Db_Interface_dataMepper{
     /**
      * Свойтво класса
      *
-     * @var string Строка
+     * @var string строка
      */
     protected $tableName;
 
