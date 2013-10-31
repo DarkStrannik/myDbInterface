@@ -60,7 +60,7 @@ abstract class Alex_Db_Abstract_dataMapper extends Alex_Db_Interface_dataMepper{
     /**
      * Метод класса
      *
-     * Занимается удалением данных либо все таблицы
+     * Занимается удалением данных либо всей таблицы
      *
      * @param array $whereOptions массив
      */
@@ -69,7 +69,7 @@ abstract class Alex_Db_Abstract_dataMapper extends Alex_Db_Interface_dataMepper{
     /**
      * Метод класса
      *
-     * Принимает название таблицы данных
+     * Принимает имя таблицы данных
      *
      * @param string $tableName строка
      */
@@ -85,7 +85,7 @@ abstract class Alex_Db_Abstract_dataMapper extends Alex_Db_Interface_dataMepper{
     /**
      * Метод класса
      *
-     * Возвращает название таблицы данных
+     * Возвращает имя таблицы данных
      *
      * @return string $tableName строка
      */
